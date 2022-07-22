@@ -25,4 +25,4 @@ jobs:
       with:
         context: .
         push: true
-	tags: VlKuzmichev/my-django-pg-docker:latest, latest
+	tags: my-django-pg-docker:$(date +%s)
