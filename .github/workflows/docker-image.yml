@@ -25,6 +25,6 @@ jobs:
       with:
         context: .
         push: true
-	tag: latest
+	tags: ${{ steps.meta_pytorch.ouputs.tags }}
 #        tags: vlkuzmichev/my-django-pg-docker:latest, VlKuzmichev/django-pg-docker: ${{ github.run_number }}
 #      run: docker build . --file Dockerfile --tag my-django-pg-docker:$(date +%s)
