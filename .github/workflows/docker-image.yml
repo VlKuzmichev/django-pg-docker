@@ -23,4 +23,4 @@ jobs:
     - name: Build the image
       run: docker build . --file Dockerfile --tag my-django-pg-docker:$(date +%s)
     - name: Push to Docker Hub
-      run: docker push ${{ secrets.DOCKER_USER }}/my-django-pg-docker
+      run: docker push ${{secrets.DOCKER_HUB_USERNAME}}/my-django-pg-docker
