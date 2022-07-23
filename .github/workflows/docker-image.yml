@@ -21,6 +21,6 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.HUB_ACCESS_TOKEN }}
     - name: Build the image
-      run: docker build . --file Dockerfile --tag my-django-pg-docker:$(date +%s)
+      run: docker build . --file Dockerfile --tag vlkuzmichev/my-django-pg-docker:latest
     - name: Push to Docker Hub
       run: docker push ${{secrets.DOCKER_HUB_USERNAME}}/my-django-pg-docker
